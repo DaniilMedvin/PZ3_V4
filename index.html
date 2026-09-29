@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регулярні вирази</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="card">
+      <h2>Перевірка даних</h2>
+      <form id="validate-form" novalidate>
+        <label for="type">Тип даних</label>
+        <select id="type">
+          <option value="email">Email</option>
+          <option value="phone">Телефон (+380XXXXXXXXX)</option>
+          <option value="date">Дата (ДД.ММ.РРРР)</option>
+        </select>
+
+        <label for="value">Значення</label>
+        <input id="value" type="text" autocomplete="off">
+
+        <button type="submit">Перевірити</button>
+      </form>
+      <p id="validate-result" class="message" role="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Номери карток</h2>
+      <form id="cards-form" novalidate>
+        <label for="cards">Введіть номери (формат XXXX XXXX XXXX XXXX)</label>
+        <textarea id="cards" rows="5"></textarea>
+
+        <button type="submit">Приховати</button>
+      </form>
+      <p id="cards-result" class="message" role="status"></p>
+      <ul id="cards-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
